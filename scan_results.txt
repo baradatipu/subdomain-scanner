@@ -1,0 +1,21 @@
+*.example.com
+example.com
+*.example.com
+example.com
+m.example.com
+www.example.com
+AS207960 Test Intermediate - example.com
+dev.example.com
+example.com
+products.example.com
+support.example.com
+www.example.com
+example.com
+m.testexample.com
+www.example.com
+example.com
+user@example.com
+example.com
+www.example.com
+subjectname@example.com
+www.example.com
