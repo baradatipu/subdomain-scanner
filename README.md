@@ -12,9 +12,16 @@ A powerful Python-based tool for discovering subdomains of target domains using 
 
 ## Prerequisites
 
-- Python 3.x installed on your system
+- Python 3.8 or higher installed on your system
 - pip (Python package installer)
 - Basic command line knowledge
+
+### Required Dependencies
+The following Python packages will be automatically installed via requirements.txt:
+- dnspython (>= 2.3.0) - For DNS enumeration and resolution
+- requests (>= 2.31.0) - For HTTP requests and certificate transparency logs
+- tqdm (>= 4.65.0) - For progress bar visualization
+- flask (>= 3.0.0) - For web interface functionality
 
 ## Installation
 
@@ -30,19 +37,21 @@ A powerful Python-based tool for discovering subdomains of target domains using 
 
 ## Usage
 
-### Basic Command Structure
+### Command Line Interface
+
+#### Basic Command Structure
 ```bash
 python subdomain_scanner.py -d DOMAIN -w WORDLIST [-t THREADS] [-o OUTPUT]
 ```
 
-### Command Line Arguments
+#### Command Line Arguments
 
 - `-d, --domain`: Target domain to scan (required)
 - `-w, --wordlist`: Path to the wordlist file containing subdomain prefixes (required)
 - `-t, --threads`: Number of concurrent threads (optional, default: 10)
 - `-o, --output`: Output file to save results (optional)
 
-### Examples
+#### Examples
 
 1. Basic scan with default settings:
    ```bash
@@ -58,6 +67,33 @@ python subdomain_scanner.py -d DOMAIN -w WORDLIST [-t THREADS] [-o OUTPUT]
    ```bash
    python subdomain_scanner.py -d example.com -w custom_wordlist.txt -o scan_results.txt
    ```
+
+### Web Interface
+
+#### Starting the Web Server
+
+1. Start the Flask web server:
+   ```bash
+   python app.py
+   ```
+2. Open your web browser and navigate to `http://localhost:5000`
+
+#### Using the Web Interface
+
+1. Enter the target domain in the domain input field
+2. (Optional) Adjust the number of threads
+3. (Optional) Upload a custom wordlist file
+4. Click the "Scan" button to start the scan
+5. View results in real-time as they appear
+6. Download the results using the "Download Results" button
+
+#### Features
+
+- User-friendly interface for subdomain scanning
+- Real-time display of discovered subdomains
+- Adjustable thread count for performance optimization
+- Optional custom wordlist upload
+- Easy download of scan results
 
 ## Output
 
