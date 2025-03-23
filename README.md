@@ -70,6 +70,8 @@ python subdomain_scanner.py -d DOMAIN -w WORDLIST [-t THREADS] [-o OUTPUT]
 
 ### Web Interface
 
+![Web Interface Screenshot](screenshots/web-interface.png)
+
 #### Starting the Web Server
 
 1. Start the Flask web server:
